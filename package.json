@@ -1,0 +1,19 @@
+{
+  "name": "qa-automation-portfolio",
+  "version": "1.0.0",
+  "description": "QA automation portfolio: UI and API tests with Playwright and TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "Steven Brito",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  }
+}
