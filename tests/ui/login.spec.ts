@@ -22,6 +22,11 @@ test.describe('Login', () => {
     await loginPage.expectError('Username and password do not match');
   });
 
+  test('empty password shows a required-field error', async () => {
+    await loginPage.login('standard_user', '');
+    await loginPage.expectError('Password is required');
+  });
+
   test('locked-out user cannot log in', async () => {
     await loginPage.login('locked_out_user', PASSWORD);
     await loginPage.expectError('this user has been locked out');
